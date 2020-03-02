@@ -10,7 +10,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-import com.comproductactivations.sdk.ProductActivations;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,14 +29,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ProductActivations.getInstance(getApplicationContext()).initialize(this);
     }
 
 
     @Override
     public void onRequestPermissionsResult(int requestCode,   String[] permissions, int[] grantResults) {
 
-        ProductActivations.getInstance(getApplicationContext()).onPermissionGranted();
     }
 
 
